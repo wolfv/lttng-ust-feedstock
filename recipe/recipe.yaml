@@ -1,6 +1,6 @@
 context:
   name: lttng-ust
-  version: "2.15.0"
+  version: "2.15.1"
 
 package:
   name: lttng-ust
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: http://lttng.org/files/lttng-ust/lttng-ust-${{ version }}.tar.bz2
-    sha256: 6bc9723c7a50dd00c7da83d40b3bbb4b0746819f4d6e377c9bd897c898993e28
+    sha256: 37c9b58ea7aa7bc47d6630b52ba1a48ebce095b9a196eab4ddd273d78301792d
 
 build:
   skip: not linux
@@ -18,7 +18,6 @@ requirements:
   build:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
-    - ${{ cdt('numactl') }}
     - make
     - autoconf
     - pkg-config
